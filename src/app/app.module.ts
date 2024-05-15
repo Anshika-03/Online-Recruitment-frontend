@@ -19,7 +19,8 @@ import { OtpVerificationComponent } from './otp-verification/otp-verification.co
 import { EmailService } from './signup/Email.service';
 import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
 import { JobAvailabilityComponent } from './job-availability/job-availability.component';
-
+import { CollegeComponent } from './college/college.component';
+import { StudentFormComponent } from './student/student.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,11 @@ import { JobAvailabilityComponent } from './job-availability/job-availability.co
     ForgotPasswordComponent,
     OtpVerificationComponent,
     ResetpasswordComponent,
-    JobAvailabilityComponent
+    JobAvailabilityComponent,
+    StudentFormComponent,
+    CollegeComponent,
+    
+
     // Declare LoginComponent here
   ],
   imports: [

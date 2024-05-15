@@ -1,0 +1,76 @@
+<div class="container" id="student-container">
+<div class="student-form-wrapper">
+  <h2 class="card-title text-center mb-4">Student Form</h2>
+    <form [formGroup]="studentForm" (ngSubmit)="addStudent()" novalidate>
+      <div class="form-group">
+        <label for="student_id">Student ID:</label>
+        <input type="number" id="student_id" formControlName="student_id" class="form-control" placeholder="Enter student ID" required>
+        <div *ngIf="studentForm.controls['student_id'].errors && studentForm.controls['student_id'].touched" class="invalid-feedback d-block">
+          Student ID is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="student_name">Student Name:</label>
+        <input type="text" id="student_name" formControlName="student_name" class="form-control" placeholder="Enter student name" required>
+        <div *ngIf="studentForm.controls['student_name'].errors && studentForm.controls['student_name'].touched" class="invalid-feedback d-block">
+          Student Name is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="student_mobile">Mobile:</label>
+        <input type="tel" id="student_mobile" formControlName="student_mobile" class="form-control" placeholder="Enter mobile number" required>
+        <div *ngIf="studentForm.controls['student_mobile'].errors && studentForm.controls['student_mobile'].touched" class="invalid-feedback d-block">
+          Mobile number is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="student_email">Email:</label>
+        <input type="email" id="student_email" formControlName="student_email" class="form-control" placeholder="Enter email" required>
+        <div *ngIf="studentForm.controls['student_email'].errors && studentForm.controls['student_email'].touched" class="invalid-feedback d-block">
+          Email is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="student_address">Address:</label>
+        <input type="text" id="student_address" formControlName="student_address" class="form-control" placeholder="Enter address" required>
+        <div *ngIf="studentForm.controls['student_address'].errors && studentForm.controls['student_address'].touched" class="invalid-feedback d-block">
+          Address is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="student_password">Password:</label>
+        <input type="password" id="student_password" formControlName="student_password" class="form-control" placeholder="Enter password" required>
+        <div *ngIf="studentForm.controls['student_password'].errors && studentForm.controls['student_password'].touched" class="invalid-feedback d-block">
+          Password is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="student_username">Username:</label>
+        <input type="text" id="student_username" formControlName="student_username" class="form-control" placeholder="Enter username" required>
+        <div *ngIf="studentForm.controls['student_username'].errors && studentForm.controls['student_username'].touched" class="invalid-feedback d-block">
+          Username is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="student_college_id">College ID:</label>
+        <input type="number" id="student_college_id" formControlName="student_college_id" class="form-control" placeholder="Enter college ID" required>
+        <div *ngIf="studentForm.controls['student_college_id'].errors && studentForm.controls['student_college_id'].touched" class="invalid-feedback d-block">
+          College ID is required.
+        </div>
+      </div>
+  
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button type="submit" [disabled]="!studentForm.valid" class="btn btn-primary me-md-2">Submit</button>
+        <button type="button" (click)="navigateBack()" class="btn btn-secondary">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+  

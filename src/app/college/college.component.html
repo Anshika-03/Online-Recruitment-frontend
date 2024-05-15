@@ -1,0 +1,45 @@
+<div class="container" id="college-container">
+
+<div class="college-form-wrapper">
+    <h2 class="card-title text-center mb-4">College Form</h2>
+    <form [formGroup]="collegeForm" (ngSubmit)="onSubmit()" novalidate>
+        <div class="form-group">
+            <label for="college_id">College ID:</label>
+            <input type="text" id="college_id" formControlName="college_id" class="form-control" placeholder="Enter college ID">
+            <div *ngIf="collegeForm.controls['college_id'].errors&& collegeForm.controls['college_id'].touched" class="invalid-feedback d-block">
+                College ID is required.
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="college_name">College Name:</label>
+            <input type="text" id="college_name" formControlName="college_name" class="form-control" placeholder="Enter college name">
+            <div *ngIf="collegeForm.controls['college_name'].errors&& collegeForm.controls['college_name'].touched" class="invalid-feedback d-block">
+                College Name is required.
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="college_description">Description:</label>
+            <textarea id="college_description" formControlName="college_description" class="form-control" placeholder="Describe the college"></textarea>
+            <div *ngIf="collegeForm.controls['college_description'].errors&& collegeForm.controls['college_description'].touched" class="invalid-feedback d-block">
+                Description is required.
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="college_address">Address:</label>
+            <input type="text" id="college_address" formControlName="college_address" class="form-control" placeholder="Enter address">
+            <div *ngIf="collegeForm.controls['college_address'].errors&& collegeForm.controls['college_address'].touched" class="invalid-feedback d-block">
+                Address is required.
+            </div>
+        </div>
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button type="submit" [disabled]="!collegeForm.valid" class="btn btn-primary me-md-2">Submit</button>
+            <button type="button" (click)="navigateBack()" class="btn btn-secondary">Cancel</button>
+        </div>
+    </form>
+</div>
+</div>
+

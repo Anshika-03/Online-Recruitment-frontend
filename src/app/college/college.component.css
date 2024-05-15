@@ -1,0 +1,80 @@
+.college-form-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  color: #333; 
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+input[type="file"],
+.btn {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+input[type="file"]:focus {
+  border-color: #80bdff; 
+  outline: none;
+}
+
+.invalid-feedback {
+  color: #dc3545; 
+}
+
+.btn-primary {
+  background-color: #007bff; 
+  color: #fff; 
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; 
+}
+
+.btn-secondary {
+  background-color: #6c757d; 
+  color: #fff; 
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268; 
+}
+
+#college-container {
+  background-image: url("https://www.businessmanager.in/wp-content/uploads/2022/12/Enhanced-skills-to-be-in-spotlight-in-Job-opportunities-in-2023.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 1200px;
+  padding: 30px;
+}
+
+
+
